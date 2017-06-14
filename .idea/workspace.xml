@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9161bbd5-c95f-4d66-a49b-9edef15b620a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/scripts/controllers/chat.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/scripts/controllers/modal-time.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/modals/time.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/states/chat.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/index.html" afterPath="$PROJECT_DIR$/app/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/app.js" afterPath="$PROJECT_DIR$/app/scripts/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/config.js" afterPath="$PROJECT_DIR$/app/scripts/config.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/styles/main.css" afterPath="$PROJECT_DIR$/app/styles/main.css" />
-    </list>
+    <list default="true" id="9161bbd5-c95f-4d66-a49b-9edef15b620a" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -378,12 +368,12 @@
       <workItem from="1496906558324" duration="5161000" />
       <workItem from="1497336308473" duration="831000" />
       <workItem from="1497339786666" duration="4418000" />
-      <workItem from="1497414563578" duration="1558000" />
+      <workItem from="1497414563578" duration="1618000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11968000" />
+    <option name="totallyTimeSpent" value="12028000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="834" extended-state="6" />
