@@ -25,7 +25,12 @@ angular
         url: '/dashboard',
         templateUrl: 'views/states/dashboard.html',
         controller: 'DashboardCtrl'
+      })
+      .state('chat', {
+        url: '/chat',
+        templateUrl: 'views/states/chat.html',
+        controller: 'ChatCtrl'
       });
-
+      
     $urlRouterProvider.otherwise('/dashboard');
   });

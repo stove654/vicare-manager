@@ -81,3 +81,43 @@ body {
     border-bottom: 0;
   }
 }
+
+.add-prof {
+  text-align: center;
+  margin: 32px 0px;
+}
+
+.calendar-time i.glyphicon.glyphicon-plus {
+  font-size: 30px;
+  color: #888;
+}
+
+.input-vicare {
+  position: relative;
+  margin-top: 10px;
+}
+
+.list-professional {
+  background-color: #f1f1f1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-top: 0;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  top: 34px;
+}
+
+.list-professional li {
+  padding: 10px 0px;
+  border-bottom: 1px solid #ddd;
+}
+
+.list-professional li:last-child {
+  border-bottom: 0;
+}
+
+.user-name {
+  margin: 30px 10px 10px 10px;
+}
+
