@@ -1,0 +1,68 @@
+<div id="content" class="app-content" role="main">
+  <div class="app-content-body ">
+
+
+    <div class="bg-light lter b-b wrapper-md">
+      <h1 class="m-n font-thin h3">Danh sách các câu hỏi đến từ app</h1>
+    </div>
+    <div class="wrapper-md">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          Danh sách
+        </div>
+        <div class="row wrapper">
+          <div class="col-sm-5 m-b-xs">
+            <select class="input-sm form-control w-sm inline v-middle">
+              <option value="0">Bulk action</option>
+              <option value="1">Delete selected</option>
+              <option value="2">Bulk edit</option>
+              <option value="3">Export</option>
+            </select>
+            <button class="btn btn-sm btn-default">Apply</button>
+          </div>
+          <div class="col-sm-4">
+          </div>
+          <div class="col-sm-3">
+            <div class="input-group">
+              <input type="text" class="input-sm form-control" placeholder="Search">
+              <span class="input-group-btn">
+            <button class="btn btn-sm btn-default" type="button">Go!</button>
+          </span>
+            </div>
+          </div>
+        </div>
+        <div class="table-responsive">
+          <table class="table table-striped b-t b-light">
+            <thead>
+            <tr>
+              <th style="width:20px;">
+                 STT
+              </th>
+              <th>
+                Thread ID
+              </th>
+              <th>Thời gian tạo</th>
+              <th>Link</th>
+              <th>
+                Đã trả lời
+              </th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="item in data.questions">
+              <td>{{$index}}</td>
+              <td>{{item.thread.id}}</td>
+              <td>{{item.createdAt | date: 'short'}}</td>
+              <td><a href="{{'https://vicare.vn' + item.thread.absolute_url}}" target="_blank">{{'https://vicare.vn' + item.thread.absolute_url}}</a></td>
+              <td class="text-center"><label class="i-checks m-b-none"><input type="checkbox" ng-model="item.active" ng-change="updateStatus(item)"><i></i></label></td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+
+
+  </div>
+</div>

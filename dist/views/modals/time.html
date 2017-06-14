@@ -1,0 +1,38 @@
+<div class="modal-header">
+  <h3 class="modal-title" id="modal-title"><i class="glyphicon glyphicon-calendar"></i> {{timeSelected.time}}, {{timeSelected.date  | date : 'yyyy/MM/dd'}}</h3>
+</div>
+<div class="modal-body" id="modal-body">
+  <div class="form-group-vicare">
+    <div class="label-vicare">Bác sĩ trực</div>
+    <div class="input-vicare">
+      <input type="text" class="form-control" id="inputEmail3" placeholder="Nhập tên bác sĩ" ng-model="search.name" ng-change="getUser()">
+      <div class="list-professional" ng-if="search.items.length">
+        <ul class="list-unstyled">
+          <li ng-repeat="user in search.items" ng-click="addPro(user)">{{user.id}}: {{user.name}}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div>
+    <table class="table">
+      <thead>
+      <tr>
+        <th>STT</th>
+        <th>Bác sĩ</th>
+        <th></th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr ng-repeat="item in search.user">
+        <td>{{$index}}</td>
+        <td>{{item.name}}</td>
+        <td><button class="btn btn-danger btn-sm" ng-click="removePro($index)"><i class="glyphicon glyphicon-remove"></i></button></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<div class="modal-footer">
+  <button class="btn btn-primary" type="button" ng-click="added()">OK</button>
+  <button class="btn btn-warning" type="button" ng-click="">Cancel</button>
+</div>

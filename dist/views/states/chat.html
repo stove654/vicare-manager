@@ -1,0 +1,64 @@
+<div id="content" class="app-content" role="main">
+  <div class="app-content-body ">
+
+
+    <div class="bg-light lter b-b wrapper-md">
+      <h1 class="m-n font-thin h3">Danh sách bác sĩ trực</h1>
+    </div>
+    <div class="wrapper-md">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          Danh sách
+        </div>
+        <div class="row wrapper">
+          <div class="col-sm-5 m-b-xs">
+
+          </div>
+          <div class="col-sm-4">
+          </div>
+          <div class="col-sm-3">
+            <div class="input-group">
+              <input type="text" class="form-control" uib-datepicker-popup="{{format}}" ng-model="dt" is-open="popup1.opened" ng-required="true" close-text="Close" alt-input-formats="altInputFormats" />
+              <span class="input-group-btn">
+                <button type="button" class="btn btn-default" ng-click="open1()"><i class="glyphicon glyphicon-calendar"></i></button>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="table-responsive">
+          <table class="table table-striped b-t b-light">
+            <thead>
+            <tr>
+              <th style="width:100px;" class="text-center">
+                 Thời gian
+              </th>
+              <th>
+                Bác sĩ trực
+              </th>
+              <th class="text-center">
+
+              </th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="item in data.times" ng-click="addCalendar(item)">
+              <td class="text-center">{{item.time}}</td>
+              <td>
+                <span ng-if="item.professional.length">Hiện có {{item.professional.length}} bác sĩ đang trực</span>
+                <span ng-if="!item.professional.length">Hiện không có bác sĩ nào trực</span>
+              </td>
+              <td class="text-center">
+                <i class="fa fa-check text-success " ng-if="item.professional.length"></i>
+                <i class="glyphicon glyphicon-remove text-error" ng-if="!item.professional.length"></i>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+
+
+  </div>
+</div>
