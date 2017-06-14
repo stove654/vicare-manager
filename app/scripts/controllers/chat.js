@@ -223,6 +223,8 @@ angular.module('appManager')
       }).then(function (response) {
         console.log(response.data);
         angular.forEach($scope.data.times, function (value) {
+          value.professional = null;
+          value.id = null;
           for (var i = 0; i < response.data.length; i++) {
             if (value.time == response.data[i].time) {
               value.professional = response.data[i].professional;
