@@ -8,6 +8,7 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/angular-ui-select/dist/select.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
@@ -15,6 +16,7 @@
     <link rel="stylesheet" href="styles/font-awesome.min.css" type="text/css" />
     <link rel="stylesheet" href="styles/simple-line-icons.css" type="text/css" />
     <link rel="stylesheet" href="styles/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="styles/datetimepicker.css" type="text/css" />
 
     <link rel="stylesheet" href="styles/font.css" type="text/css" />
     <link rel="stylesheet" href="styles/app.css" type="text/css" />
@@ -190,6 +192,14 @@
 
                 </li>
 
+                <li ui-sref="order" ui-sref-active="active">
+                  <a  class="auto">
+                    <i class="glyphicon glyphicon-calendar icon text-primary-dker"></i>
+                    <span class="font-bold">Order</span>
+                  </a>
+
+                </li>
+
 
               </ul>
             </nav>
@@ -232,12 +242,18 @@
 
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-animate/angular-animate.js"></script>
     <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
     <script src="bower_components/angular-touch/angular-touch.js"></script>
     <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
     <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="bower_components/angular-socket-io/socket.js"></script>
+    <script src="bower_components/lodash/lodash.js"></script>
+    <script src="bower_components/angular-ui-select/dist/select.js"></script>
+    <script src="bower_components/moment/moment.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -247,6 +263,10 @@
         <script src="scripts/controllers/dashboard.js"></script>
         <script src="scripts/controllers/chat.js"></script>
         <script src="scripts/controllers/modal-time.js"></script>
+        <script src="scripts/controllers/order.js"></script>
+        <script src="scripts/controllers/order-detail.js"></script>
+        <script src="scripts/datetimepicker.js"></script>
+        <script src="scripts/datetimepicker.templates.js"></script>
         <!-- endbuild -->
 </body>
 </html>

@@ -1,0 +1,86 @@
+<div id="content" class="app-content" role="main">
+  <div class="app-content-body ">
+    <div class="wrapper-md">
+      <div class="panel panel-default">
+        <div class="panel-heading font-bold">
+          Thông tin Order {{data.order._id}}
+        </div>
+        <div class="panel-body">
+          <form class="form-horizontal">
+            <div class="form-group">
+              <label class="col-sm-2 control-label">Tên khách hàng</label>
+              <div class="col-sm-10">
+                <div class="form-control">{{data.order.user.name}}</div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="col-sm-2 control-label">Thời gian tạo</label>
+              <div class="col-sm-10">
+                <div class="form-control">{{data.order.createdAt | date:'short'}}</div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="col-sm-2 control-label">Chuyên khoa</label>
+              <div class="col-sm-10">
+                <div class="form-control">{{data.order.speciality}}</div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="col-sm-2 control-label">Thời gian</label>
+              <div class="col-sm-10">
+                <div class="form-control">{{data.order.time}}</div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="col-sm-2 control-label">Tên khách hàng</label>
+              <div class="col-sm-10">
+                <div class="form-control">{{data.order.user.name}}</div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="col-sm-2 control-label">Tên bác sĩ</label>
+              <div class="col-sm-10">
+                <ui-select ng-model="data.order.professional"
+                           theme="bootstrap"
+                           reset-search-input="false"
+                           title="Chọn bác sĩ">
+                  <ui-select-match placeholder="tên bác sĩ...">{{data.order.professional.name}}</ui-select-match>
+                  <ui-select-choices repeat="professional in data.professionals track by $index"
+                                     refresh="refreshProfessional($select.search)"
+                                     refresh-delay="0">
+                    <div ng-bind-html="professional.name | highlight: $select.search"></div>
+                  </ui-select-choices>
+                </ui-select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="col-sm-2 control-label">Thời gian mở chat</label>
+              <div class="col-sm-5">
+                <div class="label label-primary">Bắt đầu {{data.order.open | date:'short'}}</div>
+                <datetimepicker data-ng-model="data.order.open"></datetimepicker>
+              </div>
+              <div class="col-sm-5">
+
+                <div class="label label-primary">Kết thúc {{data.order.end | date:'short'}}</div>
+                <datetimepicker data-ng-model="data.order.end"></datetimepicker>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="col-sm-4 col-sm-offset-2">
+                <button type="submit" class="btn btn-primary" ng-click="saveOrder()" ng-disabled="!data.order.open || !data.order.end || !data.order.professional">Lưu thay đổi</button>
+              </div>
+            </div>
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

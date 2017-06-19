@@ -14,10 +14,13 @@ angular
     'ngSanitize',
     'ngTouch',
     'ui.router',
-    'ui.bootstrap'
+    'ui.bootstrap',
+    'btford.socket-io',
+    'ui.select',
+    'ui.bootstrap.datetimepicker'
   ])
 
-  .config(function($stateProvider, $urlRouterProvider) {
+  .config(function ($stateProvider, $urlRouterProvider) {
 
     $stateProvider
 
@@ -30,7 +33,18 @@ angular
         url: '/chat',
         templateUrl: 'views/states/chat.html',
         controller: 'ChatCtrl'
-      });
-      
+      })
+      .state('order', {
+        url: '/order',
+        templateUrl: 'views/states/order.html',
+        controller: 'OrderCtrl'
+      })
+      .state('orderDetail', {
+        url: '/order/:id',
+        templateUrl: 'views/states/order-detail.html',
+        controller: 'OrderDetailCtrl'
+      })
+
+
     $urlRouterProvider.otherwise('/dashboard');
   });

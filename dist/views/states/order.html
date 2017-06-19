@@ -1,0 +1,58 @@
+<div id="content" class="app-content" role="main">
+  <div class="app-content-body ">
+
+
+    <div class="bg-light lter b-b wrapper-md">
+      <h1 class="m-n font-thin h3">Danh sách orders</h1>
+    </div>
+    <div class="wrapper-md">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          Danh sách
+        </div>
+
+        <div class="table-responsive">
+          <table class="table table-striped b-t b-light">
+            <thead>
+            <tr>
+              <th>
+                 Thời gian tạo
+              </th>
+              <th>
+                Khách hàng
+              </th>
+              <th>
+                Chuyên khoa
+              </th>
+              <th>
+                Ghi chú
+              </th>
+              <th>
+                Trạng thái
+              </th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="item in data.orders" ng-click="goToOrder(item._id)">
+              <td>{{item.createdAt | date: 'short'}}</td>
+              <td>
+                {{item.user.name}}
+              </td>
+              <td>
+                {{item.speciality}}
+              </td>
+              <td>
+                {{item.time}}
+              </td>
+              <td>Chưa xử lý</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+
+
+  </div>
+</div>
