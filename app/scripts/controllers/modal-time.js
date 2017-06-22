@@ -85,13 +85,13 @@ angular.module('appManager')
 
     $scope.getUser = debounce(function () {
       console.log($scope.search.name)
-      $http.get(config.vicare + config.api.professional, {
+      $http.get(config.url + config.api.searchPro, {
         params: {
           name: $scope.search.name
         }
       }).then(function (response) {
         console.log(response.data);
-        $scope.search.items = response.data;
+        $scope.search.items = JSON.parse(response.data.body);
         if (!$scope.search.name) $scope.search.items = [];
       })
 
