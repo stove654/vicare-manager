@@ -1,6 +1,6 @@
 angular.module('appManager')
 	.constant('config', {
-		url: 'http://54.255.225.82:8080', //54.255.225.82
+		url: 'http://54.255.179.165:8080', //54.255.179.165
     vicare: 'http://vicare.vn',
     api: {
 		  question: '/api/questions/',
