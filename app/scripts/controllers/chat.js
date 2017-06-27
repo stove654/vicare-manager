@@ -213,14 +213,6 @@ angular.module('appManager')
       _init();
     });
 
-    $scope.changeOpenChat = function () {
-      console.log($scope.data.openChat);
-      $http.put(config.url + '/api/settings', {
-        openChat: $scope.data.openChat
-      }).then(function (response) {
-        console.log(response)
-      })
-    }
 
     var _init = function () {
       var nowDate = angular.copy($scope.dt);

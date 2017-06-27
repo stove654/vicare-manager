@@ -8,6 +8,7 @@ angular.module('appManager')
       professional: '/api/v1/professional/',
       order: '/api/orders/',
       searchPro: '/api/professionals/',
-      report: '/api/reports/'
+      report: '/api/reports/',
+      setting: '/api/settings/'
     }
 	});

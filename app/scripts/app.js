@@ -55,6 +55,11 @@ angular
         templateUrl: 'views/states/report-detail.html',
         controller: 'ReportDetailCtrl'
       })
+      .state('setting', {
+        url: '/setting',
+        templateUrl: 'views/states/setting.html',
+        controller: 'SettingCtrl'
+      })
 
 
     $urlRouterProvider.otherwise('/dashboard');

@@ -1,0 +1,52 @@
+<div id="content" class="app-content" role="main">
+  <div class="app-content-body ">
+
+
+    <div class="bg-light lter b-b wrapper-md">
+      <h1 class="m-n font-thin h3">Cài đặt</h1>
+    </div>
+    <div class="wrapper-md ng-scope" >
+      <div class="panel panel-default">
+        <div class="panel-heading font-bold">Cài đặt cho ứng dụng</div>
+        <div class="panel-body">
+          <form class="bs-example form-horizontal ng-pristine ng-valid">
+            <div class="form-group">
+              <label class="col-lg-2 control-label">Phiên bản ứng dụng</label>
+              <div class="col-lg-10">
+                <input type="text" class="form-control" placeholder="1.1.0" ng-model="data.setting.version">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="col-lg-offset-2 col-lg-10">
+                <div class="checkbox">
+                  <label class="i-checks">
+                    <input type="checkbox" ng-model="data.setting.needUpdate"><i></i> Bật chế độ bắt buộc cập nhật app
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-lg-offset-2 col-lg-10">
+                <div class="checkbox">
+                  <label class="i-checks">
+                    <input type="checkbox" ng-model="data.setting.openChat"><i></i> Bật chế độ chat trên app
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-lg-offset-2 col-lg-10">
+                <button type="submit" class="btn btn-sm btn-info" ng-click="changeOpenChat()">Cập nhật</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+    </div>
+
+
+
+  </div>
+</div>
