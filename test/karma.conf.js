@@ -32,6 +32,7 @@ module.exports = function(config) {
       'bower_components/angular-ui-select/dist/select.js',
       'bower_components/moment/moment.js',
       'bower_components/bootstrap/dist/js/bootstrap.js',
+      'bower_components/angular-local-storage/dist/angular-local-storage.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
       'app/scripts/**/*.js',

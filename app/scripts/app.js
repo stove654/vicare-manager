@@ -17,7 +17,8 @@ angular
     'ui.bootstrap',
     'btford.socket-io',
     'ui.select',
-    'ui.bootstrap.datetimepicker'
+    'ui.bootstrap.datetimepicker',
+    'LocalStorageModule'
   ])
 
   .config(function ($stateProvider, $urlRouterProvider) {
@@ -43,6 +44,16 @@ angular
         url: '/order/:id',
         templateUrl: 'views/states/order-detail.html',
         controller: 'OrderDetailCtrl'
+      })
+      .state('report', {
+        url: '/report',
+        templateUrl: 'views/states/report.html',
+        controller: 'ReportCtrl'
+      })
+      .state('reportDetail', {
+        url: '/report/:id',
+        templateUrl: 'views/states/report-detail.html',
+        controller: 'ReportDetailCtrl'
       })
 
 

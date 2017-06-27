@@ -1,0 +1,39 @@
+<div id="content" class="app-content" role="main">
+  <div class="app-content-body ">
+    <div class="wrapper">
+      <ul class="timeline">
+        <li class="tl-header">
+          <div class="btn btn-info">Start</div>
+        </li>
+
+        <li class="tl-item item-chat" ng-repeat="item in data.messages" ng-class="{'tl-left': item.active}">
+          <div class="tl-wrap">
+            <span class="tl-date">{{item.createdAt | date:'short'}}</span>
+            <div class="tl-content panel padder b-a" ng-class="{'bg-success': item.active}">
+              <span class="arrow left pull-up" ng-if="!item.active"></span>
+              <span class="arrow arrow-success left pull-up hidden-left" ng-if="item.active"></span>
+              <span class="arrow arrow-success right pull-up visible-left" ng-if="item.active"></span>
+              <img ng-src="{{item.user.avatar}}" alt="">
+              <div><b>{{item.user.name}}</b></div>
+              <div ng-if="item.text" ng-class="{'text-lt': item.active}">{{item.text}}</div>
+            </div>
+          </div>
+        </li>
+        <!--<li class="tl-item tl-left">-->
+          <!--<div class="tl-wrap b-success">-->
+            <!--<span class="tl-date">7:30 am</span>-->
+            <!--<div class="tl-content panel bg-success padder">-->
+              <!--<span class="arrow arrow-success left pull-up hidden-left"></span>-->
+              <!--<span class="arrow arrow-success right pull-up visible-left"></span>-->
+              <!--<div class="text-lt">Oh! Colorful</div>-->
+            <!--</div>-->
+          <!--</div>-->
+        <!--</li>-->
+
+        <li class="tl-header">
+          <div class="btn btn-sm btn-default btn-rounded">End</div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

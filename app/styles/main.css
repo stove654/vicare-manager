@@ -120,4 +120,15 @@ body {
 .user-name {
   margin: 30px 10px 10px 10px;
 }
+.item-chat .tl-content {
+  padding-left: 55px;
+}
 
+.item-chat .tl-content img {
+  position: absolute;
+  left: 10px;
+  top: 13px;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}

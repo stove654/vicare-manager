@@ -1,0 +1,58 @@
+<div id="content" class="app-content" role="main">
+  <div class="app-content-body ">
+
+
+    <div class="bg-light lter b-b wrapper-md">
+      <h1 class="m-n font-thin h3">Danh sách chat hiện có</h1>
+    </div>
+    <div class="wrapper-md">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          Danh sách
+        </div>
+
+        <div class="table-responsive">
+          <table class="table table-striped b-t b-light">
+            <thead>
+            <tr>
+              <th>
+                ID
+              </th>
+              <th>
+                Thời gian tạo
+              </th>
+              <th>
+                User
+              </th>
+              <th>
+                Bác sĩ
+              </th>
+              <th>
+                Tin nhắn cuối
+              </th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="item in data.reports" ng-click="goHistoryChat(item._id, item)">
+              <td>{{item._id}}</td>
+              <td>{{item.createdAt | date: 'short'}}</td>
+              <td>
+                {{item.fromProfile.name}} + {{item.fromProfile.id}}
+              </td>
+              <td>
+                {{item.toProfile.name}} + {{item.toProfile.id}}
+              </td>
+              <td>
+                {{item.lastMessage}}
+              </td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+
+
+  </div>
+</div>

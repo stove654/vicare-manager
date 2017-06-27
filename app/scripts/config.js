@@ -7,6 +7,7 @@ angular.module('appManager')
       calendar: '/api/calendars/',
       professional: '/api/v1/professional/',
       order: '/api/orders/',
-      searchPro: '/api/professionals/'
+      searchPro: '/api/professionals/',
+      report: '/api/reports/'
     }
 	});
