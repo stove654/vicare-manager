@@ -15,6 +15,7 @@
           <table class="table table-striped b-t b-light">
             <thead>
             <tr>
+              <th>STT</th>
               <th>
                 ID
               </th>
@@ -34,6 +35,7 @@
             </thead>
             <tbody>
             <tr ng-repeat="item in data.reports" ng-click="goHistoryChat(item._id, item)">
+              <td>{{$index}}</td>
               <td>{{item._id}}</td>
               <td>{{item.createdAt | date: 'short'}}</td>
               <td>

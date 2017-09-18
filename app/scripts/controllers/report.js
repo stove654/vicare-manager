@@ -22,10 +22,10 @@ angular.module('appManager')
     var _init = function () {
 
       $http.get(config.url + config.api.report).then(function (response) {
-        angular.forEach(response.data, function (value) {
-          value.fromProfile = JSON.parse(value.fromProfile);
-          value.toProfile = JSON.parse(value.toProfile);
-        })
+        // angular.forEach(response.data, function (value) {
+        //   value.fromProfile = JSON.parse(value.fromProfile);
+        //   value.toProfile = JSON.parse(value.toProfile);
+        // })
         $scope.data.reports = response.data;
         console.log(response.data)
       });
