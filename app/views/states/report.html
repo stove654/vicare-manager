@@ -11,7 +11,42 @@
           Danh sách
         </div>
 
-        <div class="table-responsive">
+        <div class="table-responsive" style="overflow-x: initial;">
+          <div class="row wrapper">
+            <div class="col-sm-2 m-b-xs">
+              <select class="input-sm form-control w-sm inline v-middle" ng-model="data.selectFilter"
+                      ng-change="selectDataFilter(data.selectFilter)">
+                <option value="1">Tất cả</option>
+                <option value="2">Accept</option>
+                <option value="3">Chưa Accept</option>
+              </select>
+            </div>
+
+            <div class="col-sm-4">
+              <p class="input-group">
+                <input type="text" class="form-control" uib-datepicker-popup="dd-MM-yyyy" ng-model="data.from"
+                       is-open="popup1.opened" datepicker-options="dateOptions1" ng-required="true" close-text="Close"
+                       alt-input-formats="altInputFormats"/>
+                <span class="input-group-btn">
+                  <button type="button" class="btn btn-default" ng-click="open1()"><i class="glyphicon glyphicon-calendar"></i></button>
+                </span>
+              </p>
+            </div>
+
+            <div class="col-sm-4">
+              <p class="input-group">
+                <input type="text" class="form-control" uib-datepicker-popup="dd-MM-yyyy" ng-model="data.to"
+                       is-open="popup2.opened" datepicker-options="dateOptions2" ng-required="true" close-text="Close"
+                       alt-input-formats="altInputFormats"/>
+                <span class="input-group-btn">
+                  <button type="button" class="btn btn-default" ng-click="open2()"><i class="glyphicon glyphicon-calendar"></i></button>
+                </span>
+              </p>
+            </div>
+
+          </div>
+
+
           <table class="table table-striped b-t b-light">
             <thead>
             <tr>
@@ -25,7 +60,9 @@
               <th>
                 Users
               </th>
-
+              <th>
+                Accept
+              </th>
               <th>
                 Tin nhắn cuối
               </th>
@@ -39,8 +76,13 @@
               <td>
                 <label class="label bg-info m-l-xs" ng-repeat="data in item.users">
                   <span ng-if="!data.user.viCare.official_name">{{data.user.viCare.name}}</span>
-                  <a ng-if="data.user.viCare.official_name" href="https://vicare.vn/danh-sach/bac-si/{{data.user.viCare.user_professional_id}}/" target="_blank">{{data.user.viCare.official_name}}</a>
+                  <a ng-if="data.user.viCare.official_name"
+                     href="https://vicare.vn/danh-sach/bac-si/{{data.user.viCare.user_professional_id}}/"
+                     target="_blank">{{data.user.viCare.official_name}}</a>
                 </label>
+              </td>
+              <td>
+                <i class="fa fa-check text-success" ng-if="!item.request"></i>
               </td>
               <td>
                 {{item.lastMessage}}
@@ -51,7 +93,6 @@
         </div>
       </div>
     </div>
-
 
 
   </div>
