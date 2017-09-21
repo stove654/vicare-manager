@@ -17,17 +17,15 @@
             <tr>
               <th>STT</th>
               <th>
-                ID
+                Time tạo
               </th>
               <th>
-                Thời gian tạo
+                Time cập nhật
               </th>
               <th>
-                User
+                Users
               </th>
-              <th>
-                Bác sĩ
-              </th>
+
               <th>
                 Tin nhắn cuối
               </th>
@@ -36,13 +34,13 @@
             <tbody>
             <tr ng-repeat="item in data.reports" ng-click="goHistoryChat(item._id, item)">
               <td>{{$index}}</td>
-              <td>{{item._id}}</td>
               <td>{{item.createdAt | date: 'short'}}</td>
+              <td>{{item.updatedAt | date: 'short'}}</td>
               <td>
-                {{item.fromProfile.name}} + {{item.fromProfile.id}}
-              </td>
-              <td>
-                {{item.toProfile.name}} + {{item.toProfile.id}}
+                <label class="label bg-info m-l-xs" ng-repeat="data in item.users">
+                  <span ng-if="!data.user.viCare.official_name">{{data.user.viCare.name}}</span>
+                  <a ng-if="data.user.viCare.official_name" href="https://vicare.vn/danh-sach/bac-si/{{data.user.viCare.user_professional_id}}/" target="_blank">{{data.user.viCare.official_name}}</a>
+                </label>
               </td>
               <td>
                 {{item.lastMessage}}

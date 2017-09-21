@@ -1,6 +1,12 @@
 <div id="content" class="app-content" role="main">
   <div class="app-content-body ">
     <div class="wrapper">
+      <div class="padder-lg m-b-lg">
+        <label class="label bg-info m-l-xs" ng-repeat="data in data.chanel.users">
+          <span ng-if="!data.user.viCare.official_name">{{data.user.viCare.name}}</span>
+          <a ng-if="data.user.viCare.official_name" href="https://vicare.vn/danh-sach/bac-si/{{data.user.viCare.user_professional_id}}/">{{data.user.viCare.official_name}}</a>
+        </label>
+      </div>
       <ul class="timeline">
         <li class="tl-header">
           <div class="btn btn-info">Start</div>
