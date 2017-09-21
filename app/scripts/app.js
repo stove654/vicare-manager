@@ -50,6 +50,12 @@ angular
         templateUrl: 'views/states/report.html',
         controller: 'ReportCtrl'
       })
+
+      .state('reportAll', {
+        url: '/reportAll',
+        templateUrl: 'views/states/report-all.html',
+        controller: 'ReportAllCtrl'
+      })
       .state('reportDetail', {
         url: '/report/:id',
         templateUrl: 'views/states/report-detail.html',

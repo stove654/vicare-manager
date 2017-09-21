@@ -1,0 +1,73 @@
+<div id="content" class="app-content" role="main">
+  <div class="app-content-body ">
+
+
+    <div class="bg-light lter b-b wrapper-md">
+      <h1 class="m-n font-thin h3">Danh sách chat hiện có</h1>
+    </div>
+    <div class="wrapper-md">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          Danh sách
+        </div>
+
+        <div class="table-responsive">
+          <div class="row wrapper">
+            <div class="col-sm-5 m-b-xs">
+              <select class="input-sm form-control w-sm inline v-middle" ng-model="data.selectFilter" ng-change="selectDataFilter(data.selectFilter)">
+                <option value="1">Tất cả</option>
+                <option value="2">Accept</option>
+                <option value="3">Chưa Accept</option>
+              </select>
+            </div>
+
+          </div>
+          <table class="table table-striped b-t b-light">
+            <thead>
+            <tr>
+              <th>STT</th>
+              <th style="width: 140px">
+                Time tạo
+              </th>
+              <th style="width: 140px">
+                Time cập nhật
+              </th>
+              <th>
+                Users
+              </th>
+              <th>
+                Accept
+              </th>
+              <th>
+                Tin nhắn cuối
+              </th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="item in data.reports" ng-click="goHistoryChat(item._id, item)">
+              <td>{{$index}}</td>
+              <td>{{item.createdAt | date: 'short'}}</td>
+              <td>{{item.updatedAt | date: 'short'}}</td>
+              <td>
+                <label class="label bg-info m-l-xs" ng-repeat="data in item.users">
+                  <span ng-if="!data.user.viCare.official_name">{{data.user.viCare.name}}</span>
+                  <a ng-if="data.user.viCare.official_name" href="https://vicare.vn/danh-sach/bac-si/{{data.user.viCare.user_professional_id}}/" target="_blank">{{data.user.viCare.official_name}}</a>
+                </label>
+              </td>
+              <td>
+                <i class="fa fa-check text-success" ng-if="!item.request"></i>
+              </td>
+              <td>
+                {{item.lastMessage}}
+              </td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+
+
+  </div>
+</div>
