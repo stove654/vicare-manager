@@ -1,11 +1,29 @@
 <div id="content" class="app-content" role="main">
   <div class="app-content-body ">
 
-
     <div class="bg-light lter b-b wrapper-md">
       <h1 class="m-n font-thin h3">Danh sách chat hiện có</h1>
     </div>
     <div class="wrapper-md">
+
+      <!--<div class="row">-->
+        <!--<div class="col-md-6">-->
+          <!--<div class="panel panel-default">-->
+            <!--<div class="panel-heading font-bold">Lượt chat</div>-->
+            <!--<div class="panel-body">-->
+              <!--<canvas id="polar-area" class="chart chart-polar-area"-->
+                      <!--chart-data="data" chart-labels="labels" chart-options="options">-->
+              <!--</canvas>-->
+            <!--</div>-->
+          <!--</div>-->
+        <!--</div>-->
+        <!--<div class="col-md-6">-->
+          <!--<div class="panel panel-default">-->
+
+          <!--</div>-->
+        <!--</div>-->
+      <!--</div>-->
+
       <div class="panel panel-default">
         <div class="panel-heading">
           Danh sách
@@ -52,10 +70,10 @@
             <tr>
               <th>STT</th>
               <th style="width: 140px">
-                Time tạo
+                Tin nhắn cuối lúc
               </th>
               <th style="width: 140px">
-                Time cập nhật
+                Thời gian tạo
               </th>
               <th>
                 Users
@@ -71,8 +89,8 @@
             <tbody>
             <tr ng-repeat="item in data.reports" ng-click="goHistoryChat(item._id, item)">
               <td>{{$index}}</td>
+              <td>{{item.lastMessageTime | date: 'short'}}</td>
               <td>{{item.createdAt | date: 'short'}}</td>
-              <td>{{item.updatedAt | date: 'short'}}</td>
               <td>
                 <label class="label bg-info m-l-xs" ng-repeat="data in item.users">
                   <span ng-if="!data.user.viCare.official_name">{{data.user.viCare.name}}</span>

@@ -82,8 +82,21 @@ angular.module('appManager')
     });
 
     var _init = function () {
+      var now = new Date();
+
+      var today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+
+      console.log(today)
 
       $scope.selectDataFilter($scope.data.selectFilter);
+
+      $http.get(config.url + config.api.reportChat, {
+        params: {
+          today: today
+        }
+      }).then(function (response) {
+        console.log(response)
+      })
     };
 
     _init();

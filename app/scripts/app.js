@@ -18,7 +18,8 @@ angular
     'btford.socket-io',
     'ui.select',
     'ui.bootstrap.datetimepicker',
-    'LocalStorageModule'
+    'LocalStorageModule',
+    'chart.js'
   ])
 
   .config(function ($stateProvider, $urlRouterProvider) {
@@ -68,5 +69,5 @@ angular
       })
 
 
-    $urlRouterProvider.otherwise('/dashboard');
+    $urlRouterProvider.otherwise('/report');
   });

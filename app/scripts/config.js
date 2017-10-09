@@ -9,6 +9,7 @@ angular.module('appManager')
       order: '/api/orders/',
       searchPro: '/api/professionals/',
       report: '/api/reports/',
-      setting: '/api/settings/'
+      setting: '/api/settings/',
+      reportChat: '/api/report-daily/',
     }
 	});
