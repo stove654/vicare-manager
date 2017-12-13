@@ -11,7 +11,7 @@ angular.module('appManager')
   .controller('ReportCtrl', function ($scope, $http, config, $state, localStorageService) {
 
     var d = new Date();
-    d.setDate(d.getDate() - 7);
+    d.setDate(d.getDate() - 2);
     console.log(d.toString());
 
     $scope.data = {
